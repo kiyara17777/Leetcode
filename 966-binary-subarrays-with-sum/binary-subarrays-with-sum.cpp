@@ -1,10 +1,10 @@
 class Solution {
 public:
-    int atmost(vector<int>& nums, int goal){
+    int atmost(vector<int>&nums,int goal){
         if(goal<0) return 0;
         int left=0;
-        int cnt=0;
         int sum=0;
+        int cnt=0;
         for(int right=0;right<nums.size();right++){
             sum+=nums[right];
 
@@ -13,7 +13,6 @@ public:
                 left++;
             }
             cnt+=right-left+1;
-
         }
         return cnt;
     }
